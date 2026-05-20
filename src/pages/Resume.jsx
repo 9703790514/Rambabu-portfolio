@@ -73,7 +73,7 @@ export default function Resume() {
 
   const handleDownload = useCallback(() => {
     // Download the PDF file from public folder
-    const pdfUrl = `${import.meta.env.BASE_URL}resume/Routhu_Rambabu_Java_FullStack_Developer_Resume3.pdf`;
+    const pdfUrl = `${import.meta.env.BASE_URL}resume/Routhu_Rambabu_Java_FullStack_Developer_Resume__.pdf`;
     const link = document.createElement('a');
     link.href = pdfUrl;
     link.download = 'Routhu_Rambabu_Java_FullStack_Developer_Resume.pdf';
