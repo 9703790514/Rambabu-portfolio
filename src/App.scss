@@ -7,10 +7,7 @@
 .home__projects-section .btn,
 .home__projects-grid button,
 .home__project-card button,
-.home__project-card .btn,
-button.outline,
-button[class*="group"],
-button[class*="btn"] {
+.home__project-card .btn {
   display: none !important;
   visibility: hidden !important;
   pointer-events: none !important;

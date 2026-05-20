@@ -1,6 +1,6 @@
 import { lazy, Suspense } from 'react';
 import './App.scss';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import AnimatedBackground from './components/ui/AnimatedBackground';
@@ -25,7 +25,7 @@ function PageLoader() {
 
 function App() {
   return (
-    <BrowserRouter basename="/Rambabu-portfolio">
+    <HashRouter>
       {/* Scroll to top on route change */}
       <ScrollToTop />
       
@@ -51,7 +51,7 @@ function App() {
         </main>
         <Footer />
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
