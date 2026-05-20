@@ -6,19 +6,19 @@ import { memo } from 'react';
 const TechIcon = memo(function TechIcon({ name, className = '' }) {
   // Map of tech names to their logo image paths
   const imageLogos = {
-    'Java': '/java.jpg',
-    'JavaScript': '/javascript.jpg',
-    'SQL': '/sql.jpg',
-    'React.js': '/react.jpg',
-    'HTML5': '/html.jpg',
-    'CSS3': '/css.jpg',
-    'Spring Boot': '/spring-boot.jpg',
-    'Hibernate': '/hibernate.jpg',
-    'PostgreSQL': '/pgsql.jpg',
-    'MySQL': '/mysql.jpg',
-    'Apache NiFi': '/nifi.jpg',
-    'Git': '/git.jpg',
-    'Postman': '/postman.jpg',
+    'Java': `${import.meta.env.BASE_URL}java.jpg`,
+    'JavaScript': `${import.meta.env.BASE_URL}javascript.jpg`,
+    'SQL': `${import.meta.env.BASE_URL}sql.jpg`,
+    'React.js': `${import.meta.env.BASE_URL}react.jpg`,
+    'HTML5': `${import.meta.env.BASE_URL}html.jpg`,
+    'CSS3': `${import.meta.env.BASE_URL}css.jpg`,
+    'Spring Boot': `${import.meta.env.BASE_URL}spring-boot.jpg`,
+    'Hibernate': `${import.meta.env.BASE_URL}hibernate.jpg`,
+    'PostgreSQL': `${import.meta.env.BASE_URL}pgsql.jpg`,
+    'MySQL': `${import.meta.env.BASE_URL}mysql.jpg`,
+    'Apache NiFi': `${import.meta.env.BASE_URL}nifi.jpg`,
+    'Git': `${import.meta.env.BASE_URL}git.jpg`,
+    'Postman': `${import.meta.env.BASE_URL}postman.jpg`,
   };
 
   // If we have an actual image for this tech, use it

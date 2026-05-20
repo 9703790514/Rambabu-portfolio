@@ -25,7 +25,7 @@ function PageLoader() {
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/Rambabu-portfolio">
       {/* Scroll to top on route change */}
       <ScrollToTop />
       

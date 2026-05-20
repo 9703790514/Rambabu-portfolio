@@ -39,21 +39,21 @@ export default function Home() {
       description: 'Enterprise-grade cross-database migration with Apache NiFi workflows',
       tech: ['React.js', 'Spring Boot', 'Apache NiFi'],
       gradient: 'from-indigo-500/20 to-purple-500/20',
-      image: '/DataMigration.png'
+      image: `${import.meta.env.BASE_URL}DataMigration.png`
     },
     {
       title: 'Claim Processing System',
       description: 'Enterprise insurance system with automated workflows and policy validation',
       tech: ['Java', 'Spring Boot', 'MySQL'],
       gradient: 'from-purple-500/20 to-pink-500/20',
-      image: '/Insurance Verification Tools in Medical Billing Software.jpg'
+      image: `${import.meta.env.BASE_URL}Insurance Verification Tools in Medical Billing Software.jpg`
     },
     {
       title: 'Hospital Management System',
       description: 'Comprehensive OPD management with appointments and billing',
       tech: ['Spring Boot', 'React.js', 'MySQL'],
       gradient: 'from-blue-500/20 to-cyan-500/20',
-      image: '/Hospital Management System_ Features, Modules, Functions, Advantages - Existek Blog.jpg'
+      image: `${import.meta.env.BASE_URL}Hospital Management System_ Features, Modules, Functions, Advantages - Existek Blog.jpg`
     }
   ], []);
 
@@ -254,7 +254,7 @@ export default function Home() {
                   className="home__avatar"
                 >
                   <img 
-                    src="/Rambabu.jpg" 
+                    src={`${import.meta.env.BASE_URL}Rambabu.jpg`}
                     alt="Routhu Rambabu" 
                     className="home__avatar-image"
                   />
