@@ -1,0 +1,266 @@
+@import '../styles/variables';
+@import '../styles/mixins';
+
+.projects {
+  &__hero {
+    padding-top: 8rem;
+    padding-bottom: 4rem;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 2.25rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+
+    @include md {
+      font-size: 3rem;
+    }
+
+    span {
+      background: linear-gradient(135deg, $accent-purple 0%, $accent-blue 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  }
+
+  &__description {
+    font-size: 1.125rem;
+    color: $gray-300;
+    max-width: 48rem;
+    margin: 0 auto;
+    line-height: 1.75;
+
+    @include md {
+      font-size: 1.25rem;
+    }
+  }
+
+  &__list {
+    padding: 4rem 0;
+  }
+
+  &__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  &__project-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    @include transition;
+
+    &:hover {
+      .projects__item {
+        transform: translateY(-8px);
+        border-color: rgba($primary-500, 0.5);
+        box-shadow: 0 12px 40px rgba($primary-500, 0.3);
+      }
+
+      .projects__project-title {
+        background: linear-gradient(135deg, $accent-purple 0%, $accent-blue 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+    }
+  }
+
+  &__item {
+    overflow: hidden;
+    cursor: pointer;
+    @include transition;
+
+    &--even {
+      @include lg {
+        display: grid;
+        grid-template-columns: 1fr 400px;
+      }
+    }
+
+    &--odd {
+      @include lg {
+        display: grid;
+        grid-template-columns: 400px 1fr;
+      }
+    }
+  }
+
+  &__thumbnail {
+    position: relative;
+    height: 16rem;
+    overflow: hidden;
+
+    @include lg {
+      height: 100%;
+    }
+  }
+
+  &__thumbnail-bg {
+    position: absolute;
+    inset: 0;
+    opacity: 0.1;
+    z-index: 1;
+  }
+
+  &__thumbnail-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
+  }
+
+  &__thumbnail-icon {
+    position: absolute;
+    inset: 0;
+    @include flex-center;
+
+    svg {
+      width: 8rem;
+      height: 8rem;
+      color: rgba(255, 255, 255, 0.3);
+      stroke-width: 1;
+    }
+  }
+
+  &__content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    @include md {
+      padding: 2rem;
+    }
+
+    &--order-2 {
+      @include lg {
+        order: 2;
+      }
+    }
+  }
+
+  &__project-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 0.75rem;
+    @include transition;
+
+    @include md {
+      font-size: 1.875rem;
+    }
+
+    &:hover {
+      @include gradient-text;
+    }
+  }
+
+  &__project-description {
+    color: $gray-300;
+    line-height: 1.75;
+  }
+
+  &__tech-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  &__tech-label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: $primary-400;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  &__tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  &__features {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  &__features-label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: $primary-400;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  &__features-grid {
+    display: grid;
+    gap: 0.5rem;
+
+    @include md {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: $gray-400;
+
+    svg {
+      width: 1rem;
+      height: 1rem;
+      color: $primary-500;
+      flex-shrink: 0;
+      margin-top: 0.125rem;
+    }
+  }
+
+  &__cta {
+    padding: 4rem 0;
+    text-align: center;
+  }
+
+  &__cta-card {
+    padding: 2rem 3rem;
+    max-width: 48rem;
+    margin: 0 auto;
+
+    @include md {
+      padding: 3rem;
+    }
+  }
+
+  &__cta-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 1rem;
+
+    @include md {
+      font-size: 1.875rem;
+    }
+  }
+
+  &__cta-description {
+    color: $gray-300;
+    margin-bottom: 1.5rem;
+  }
+
+  &__cta-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+}

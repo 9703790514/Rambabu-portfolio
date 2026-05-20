@@ -1,0 +1,42 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.card {
+  border-radius: $radius-xl;
+  border: 1px solid;
+  backdrop-filter: blur(4px);
+  @include transition(all);
+
+  &.default {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  &.glass {
+    @include glass;
+  }
+
+  &.glass-dark {
+    @include glass-dark;
+  }
+
+  &.gradient {
+    background: linear-gradient(135deg, rgba($primary-500, 0.1) 0%, rgba($primary-950, 0.05) 100%);
+    border-color: rgba($primary-500, 0.2);
+  }
+
+  &.glow {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba($primary-500, 0.3);
+
+    &:hover {
+      box-shadow: $shadow-glow;
+    }
+  }
+
+  &.hover:hover {
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: $shadow-premium;
+    transform: translateY(-4px);
+  }
+}

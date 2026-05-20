@@ -1,0 +1,388 @@
+@import '../styles/variables';
+@import '../styles/mixins';
+@import '../styles/print';
+
+.resume {
+  &__header {
+    padding-top: 8rem;
+    padding-bottom: 4rem;
+  }
+
+  &__header-card {
+    padding: 1.5rem 2rem;
+
+    @include md {
+      padding: 2rem;
+    }
+  }
+
+  &__header-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    @include md {
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+  }
+
+  &__personal-info {
+    flex: 1;
+  }
+
+  &__name {
+    font-size: 1.875rem;
+    font-weight: bold;
+    background: linear-gradient(135deg, $accent-purple 0%, $accent-blue 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.5rem;
+
+    @include md {
+      font-size: 2.25rem;
+    }
+  }
+
+  &__role {
+    font-size: 1.25rem;
+    color: $primary-400;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+
+  &__contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    color: $gray-300;
+  }
+
+  &__contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    svg {
+      width: 1rem;
+      height: 1rem;
+      color: $primary-500;
+    }
+
+    a {
+      @include transition(color);
+
+      &:hover {
+        color: $primary-400;
+      }
+    }
+  }
+
+  &__download-button {
+    @include md {
+      align-self: flex-start;
+    }
+  }
+
+  &__section {
+    padding: 4rem 0;
+  }
+
+  &__section-header {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+
+    @include md {
+      font-size: 1.875rem;
+    }
+
+    svg {
+      width: 2rem;
+      height: 2rem;
+      color: $primary-500;
+    }
+
+    span {
+      @include gradient-text;
+    }
+  }
+
+  &__summary-card {
+    padding: 1.5rem 2rem;
+
+    @include md {
+      padding: 2rem;
+    }
+  }
+
+  &__summary-text {
+    color: $gray-300;
+    line-height: 1.75;
+    font-size: 1.125rem;
+  }
+
+  &__experience-card {
+    padding: 1.5rem 2rem;
+    position: relative;
+    overflow: hidden;
+
+    @include md {
+      padding: 2rem;
+    }
+  }
+
+  &__experience-accent {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 0.25rem;
+    background: linear-gradient(180deg, $primary-500 0%, $primary-600 100%);
+  }
+
+  &__experience-content {
+    margin-left: 1rem;
+  }
+
+  &__experience-header {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1rem;
+
+    @include md {
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+  }
+
+  &__experience-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 0.25rem;
+
+    @include md {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__experience-company {
+    color: $primary-400;
+    font-weight: 500;
+
+    span {
+      color: $gray-500;
+    }
+  }
+
+  &__experience-badge {
+    @include md {
+      align-self: flex-start;
+    }
+  }
+
+  &__achievements {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  &__achievement-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    color: $gray-300;
+
+    span {
+      color: $primary-500;
+      margin-top: 0.25rem;
+      font-size: 1.125rem;
+    }
+  }
+
+  &__skills-card {
+    padding: 1.5rem 2rem;
+
+    @include md {
+      padding: 2rem;
+    }
+  }
+
+  &__skills-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  &__skill-category {
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+    &:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+  }
+
+  &__skill-category-title {
+    color: $primary-400;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    letter-spacing: 0.05em;
+  }
+
+  &__skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  &__education-card {
+    padding: 1.5rem 2rem;
+    position: relative;
+    overflow: hidden;
+
+    @include md {
+      padding: 2rem;
+    }
+  }
+
+  &__education-accent {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 0.25rem;
+    background: linear-gradient(180deg, $accent-blue 0%, $accent-cyan 100%);
+  }
+
+  &__education-content {
+    margin-left: 1rem;
+  }
+
+  &__education-header {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+
+    @include md {
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+  }
+
+  &__education-degree {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 0.25rem;
+
+    @include md {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__education-institution {
+    color: $primary-400;
+    font-weight: 500;
+
+    span {
+      color: $gray-500;
+    }
+  }
+
+  &__education-badge {
+    @include md {
+      align-self: flex-start;
+    }
+  }
+
+  &__education-gpa {
+    color: #10b981;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  &__education-focus {
+    color: $gray-300;
+  }
+
+  &__certifications-card {
+    padding: 1.5rem 2rem;
+
+    @include md {
+      padding: 2rem;
+    }
+  }
+
+  &__certifications-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  &__certification-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    color: $gray-300;
+
+    svg {
+      width: 1.25rem;
+      height: 1.25rem;
+      color: $primary-500;
+      flex-shrink: 0;
+      margin-top: 0.25rem;
+    }
+  }
+
+  &__cta {
+    padding: 4rem 0;
+    text-align: center;
+  }
+
+  &__cta-card {
+    padding: 2rem 3rem;
+    max-width: 48rem;
+    margin: 0 auto;
+
+    @include md {
+      padding: 3rem;
+    }
+  }
+
+  &__cta-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 1rem;
+
+    @include md {
+      font-size: 1.875rem;
+    }
+  }
+
+  &__cta-description {
+    color: $gray-300;
+    margin-bottom: 1.5rem;
+  }
+
+  &__cta-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+}

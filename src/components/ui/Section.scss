@@ -1,0 +1,14 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.section {
+  padding: 4rem 0;
+
+  @include md {
+    padding: 6rem 0;
+  }
+
+  .section-container {
+    max-width: 72rem;
+  }
+}

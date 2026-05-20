@@ -1,0 +1,12 @@
+@import '../../styles/variables';
+
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 0.25rem;
+  background: linear-gradient(to right, $primary-600, $primary-500, $accent-cyan);
+  transform-origin: left;
+  z-index: 50;
+}

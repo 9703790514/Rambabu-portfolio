@@ -1,0 +1,58 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.animated-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+
+  .gradient-mesh {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, $dark-950 0%, $dark-900 50%, $dark-950 100%);
+  }
+
+  .noise {
+    position: absolute;
+    inset: 0;
+    opacity: 0.02;
+  }
+
+  .blob {
+    position: absolute;
+    border-radius: $radius-full;
+    filter: blur(72px);
+
+    &.blob-1 {
+      width: 24rem;
+      height: 24rem;
+      background: rgba($primary-500, 0.2);
+      top: 0;
+      left: -5rem;
+    }
+
+    &.blob-2 {
+      width: 20rem;
+      height: 20rem;
+      background: rgba($primary-900, 0.2);
+      top: 33.33%;
+      right: -5rem;
+    }
+
+    &.blob-3 {
+      width: 18rem;
+      height: 18rem;
+      background: rgba($accent-cyan, 0.15);
+      bottom: 5rem;
+      left: 25%;
+    }
+  }
+
+  .radial-overlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle, transparent 0%, rgba($dark-900, 0.5) 50%, $dark-950 100%);
+  }
+}

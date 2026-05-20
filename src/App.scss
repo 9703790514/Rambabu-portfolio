@@ -1,0 +1,35 @@
+/* 
+  Premium Portfolio Styles
+*/
+
+/* Hide all buttons in Home page Featured Projects section EXCEPT project card links */
+.home__projects-section button,
+.home__projects-section .btn,
+.home__projects-grid button,
+.home__project-card button,
+.home__project-card .btn,
+button.outline,
+button[class*="group"],
+button[class*="btn"] {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  opacity: 0 !important;
+  height: 0 !important;
+  width: 0 !important;
+  position: absolute !important;
+  left: -9999px !important;
+}
+
+/* Allow project card links and CTA button */
+.home__project-link,
+.home__cta-container a,
+.home__cta-container button {
+  display: block !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  opacity: 1 !important;
+  height: auto !important;
+  width: auto !important;
+  position: relative !important;
+}

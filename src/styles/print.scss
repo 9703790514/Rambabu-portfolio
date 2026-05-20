@@ -1,0 +1,80 @@
+/* Print Styles for Resume Page */
+@media print {
+  /* Hide unnecessary elements */
+  .header,
+  .footer,
+  .scroll-progress,
+  .animated-bg,
+  .resume__download-button,
+  nav,
+  button {
+    display: none !important;
+  }
+
+  /* Reset page styling */
+  body {
+    background: white !important;
+    color: black !important;
+  }
+
+  /* Make sections fit better */
+  .section {
+    page-break-inside: avoid;
+    padding: 1rem 0 !important;
+  }
+
+  /* Card styling for print */
+  .card {
+    background: white !important;
+    border: 1px solid #ddd !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    page-break-inside: avoid;
+    margin-bottom: 1rem !important;
+  }
+
+  /* Text colors */
+  h1, h2, h3, h4, h5, h6, p, span, div {
+    color: black !important;
+  }
+
+  /* Links */
+  a {
+    color: #0066cc !important;
+    text-decoration: none !important;
+  }
+
+  /* Badges */
+  .badge {
+    background: #f0f0f0 !important;
+    color: black !important;
+    border: 1px solid #ccc !important;
+  }
+
+  /* Remove animations */
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  /* Page breaks */
+  .resume__section {
+    page-break-inside: avoid;
+  }
+
+  /* Optimize spacing */
+  .resume__header-card {
+    margin-bottom: 1.5rem !important;
+  }
+
+  .resume__experience-card,
+  .resume__skills-card {
+    margin-bottom: 1rem !important;
+  }
+
+  /* Ensure proper sizing */
+  @page {
+    margin: 1.5cm;
+    size: A4;
+  }
+}
