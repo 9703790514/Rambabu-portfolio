@@ -5,6 +5,7 @@ import path from 'path'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/Rambabu-portfolio/',
   resolve: {
     alias: {
       react: path.resolve(__dirname, 'node_modules/react'),
