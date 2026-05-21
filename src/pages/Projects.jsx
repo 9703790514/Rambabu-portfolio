@@ -1,4 +1,5 @@
 import { useMemo } from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FiExternalLink } from 'react-icons/fi';
 import { FaDatabase, FaCheckCircle } from 'react-icons/fa';
@@ -227,17 +228,17 @@ export default function Projects() {
               I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
             </p>
             <div className="projects__cta-actions">
-              <a href="/contact">
+              <Link to="/contact">
                 <Button variant="primary" size="lg" className="group">
                   Let's Talk
                   <FiExternalLink className="text-base" />
                 </Button>
-              </a>
-              <a href="/resume">
+              </Link>
+              <Link to="/resume">
                 <Button variant="secondary" size="lg">
                   View Resume
                 </Button>
-              </a>
+              </Link>
             </div>
           </Card>
         </motion.div>
