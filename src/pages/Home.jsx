@@ -39,21 +39,24 @@ export default function Home() {
       description: 'Enterprise-grade cross-database migration with Apache NiFi workflows',
       tech: ['React.js', 'Spring Boot', 'Apache NiFi'],
       gradient: 'from-indigo-500/20 to-purple-500/20',
-      image: `${import.meta.env.BASE_URL}DataMigration.png`
+      image: `${import.meta.env.BASE_URL}DataMigration.png`,
+      githubLink: '#'
     },
     {
       title: 'Claim Processing System',
       description: 'Enterprise insurance system with automated workflows and policy validation',
       tech: ['Java', 'Spring Boot', 'MySQL'],
       gradient: 'from-purple-500/20 to-pink-500/20',
-      image: `${import.meta.env.BASE_URL}Insurance Verification Tools in Medical Billing Software.jpg`
+      image: `${import.meta.env.BASE_URL}Insurance Verification Tools in Medical Billing Software.jpg`,
+      githubLink: 'https://github.com/9703790514/Claim_Processing_System'
     },
     {
       title: 'Hospital Management System',
       description: 'Comprehensive OPD management with appointments and billing',
       tech: ['Spring Boot', 'React.js', 'MySQL'],
       gradient: 'from-blue-500/20 to-cyan-500/20',
-      image: `${import.meta.env.BASE_URL}Hospital Management System_ Features, Modules, Functions, Advantages - Existek Blog.jpg`
+      image: `${import.meta.env.BASE_URL}Hospital Management System_ Features, Modules, Functions, Advantages - Existek Blog.jpg`,
+      githubLink: 'https://github.com/9703790514/Hospital_OPD_Management_System'
     }
   ], []);
 
@@ -435,7 +438,7 @@ export default function Home() {
               transition={{ delay: index * 0.1 }}
             >
               <a 
-                href="https://github.com/dashboard" 
+                href={project.githubLink} 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="home__project-link"
