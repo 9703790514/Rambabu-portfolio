@@ -47,7 +47,7 @@ export default function Projects() {
       icon: MdStorage,
       image: `${import.meta.env.BASE_URL}Insurance Verification Tools in Medical Billing Software.jpg`,
       demoLink: '#',
-      githubLink: '#',
+      githubLink: 'https://github.com/9703790514/Claim_Processing_System',
     },
     {
       title: 'Hospital Management System',
@@ -65,7 +65,7 @@ export default function Projects() {
       icon: FaDatabase,
       image: `${import.meta.env.BASE_URL}Hospital Management System_ Features, Modules, Functions, Advantages - Existek Blog.jpg`,
       demoLink: '#',
-      githubLink: '#',
+      githubLink: 'https://github.com/9703790514/Hospital_OPD_Management_System',
     },
   ], []);
 
@@ -100,7 +100,7 @@ export default function Projects() {
               transition={{ duration: 0.6, delay: index * 0.2 }}
             >
               <a 
-                href="https://github.com/dashboard" 
+                href={project.githubLink} 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="projects__project-link"
